@@ -28,7 +28,6 @@ header {
   padding: 10px 0px 5px 0px;
   width: 200px;
   border-bottom: 2px solid rgba(255, 255, 255, 0);
-  transition: border 0.2s ease-in-out;
 }
 
 /* 돋보기 아이콘 */
@@ -37,7 +36,6 @@ header {
   font-weight: bold;
   padding-right: 5px;
   color: rgba(255, 255, 255, 0.8);
-  transition: color 0.2s ease-in-out;
 }
 
 /* 검색 폼 인풋 박스 */
@@ -62,7 +60,6 @@ header {
   width: 15px;
   width: 15px;
   opacity: 0;
-  transition: opacity 0.2s ease-in-out;
 }
 
 

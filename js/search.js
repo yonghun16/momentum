@@ -5,7 +5,9 @@ const searchEngin = document.querySelector(".searchForm__engin");
 
 // searchForm에 마우스가 들어 왔을 때 이벤트
 function hoverSearch() {
-  if(!searchForm.classList.contains("searchForm-focus")) {
+  if(!searchForm.classList.contains("searchForm-hover") ||
+     !searchForm.classList.contains("searchForm-focus")
+    ){
     searchForm.classList.add("searchForm-hover"); 
     searchFormGlass.classList.add("searchForm__glass-hover");
     searchEngin.classList.add("searchForm__engin-hover")
