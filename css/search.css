@@ -28,6 +28,7 @@ header {
   padding: 10px 0px 5px 0px;
   width: 200px;
   border-bottom: 2px solid rgba(255, 255, 255, 0);
+  transition: border 0.2s ease-in-out;
 }
 
 /* 돋보기 아이콘 */
@@ -60,6 +61,7 @@ header {
   width: 15px;
   width: 15px;
   opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
 
@@ -86,10 +88,10 @@ header {
 .searchForm-focus {
   color: white;
   border-bottom: 2px solid rgba(255, 255, 255, 1);
-  transition: border 0.1s ease-in-out;
+  transition: border 0.2s ease-in-out;
 }
 .searchForm__engin-focus {
   opacity: 1;
-  transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 

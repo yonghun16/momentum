@@ -33,15 +33,9 @@ function focusSearch() {
 
 // inputbox focus가 바뀌었을 때 이벤트
 function focusChangeSearch() {
-  searchForm.classList.remove("searchForm-focus");
-  searchFormGlass.classList.remove("searchForm__glass-focus");
-  searchEngin.classList.remove("searchForm__engin-focus");
-}
-
-// submit 이벤트
-function onSearchSubmit() {
-  const searchItem = searchInput.value;
-  console.log(searchItem);
+  searchForm.classList.toggle("searchForm-focus");
+  searchFormGlass.classList.toggle("searchForm__glass-focus");
+  searchEngin.classList.toggle("searchForm__engin-focus");
 }
 
 //이벤트 핸들링
@@ -50,5 +44,3 @@ searchForm.addEventListener("mouseout", leaveSearch);
 
 searchInput.addEventListener("focus", focusSearch);
 searchInput.addEventListener("blur", focusChangeSearch);
-
-searchForm.addEventListener("submit", onSearchSubmit);

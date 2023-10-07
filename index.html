@@ -12,9 +12,9 @@
       <!-- 검색 폼-->
       <div class="linkAndSearch">
         <div class="linksButton"> Links </div>
-        <form class="searchForm">
+        <form class="searchForm" action="https://www.google.com/search" type="text" autocomplete="off" method="get">
           <i class="fa-solid fa-magnifying-glass searchForm__glass"></i>
-          <input required type="text" />
+          <input required type="text" name="q" />
           <input type="submit" value="search" />
           <img src="img/icons/google.svg" class="searchForm__engin" />
         </form>
