@@ -10,10 +10,15 @@
   <body>
     <header>
       <!-- 검색 폼-->
-      <form id="search-form">
-        <input required type="text" />
-        <input type="submit" value="search" />
-      </form>
+      <div class="linkAndSearch">
+        <div class="linksButton"> Links </div>
+        <form class="searchForm">
+          <i class="fa-solid fa-magnifying-glass searchForm__glass"></i>
+          <input required type="text" />
+          <input type="submit" value="search" />
+          <img src="img/icons/google.svg" class="searchForm__engin" />
+        </form>
+      </div>
       <div>
         <span>2</span>
       </div>
@@ -21,7 +26,7 @@
 
     <main>
       <!-- 로그인 폼 -->
-      <form class="hidden" id="login-form">
+      <form id="login-form" class="hidden" >
         <input
           required
           maxlength="15"
@@ -66,8 +71,10 @@
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
-    <!-- <script src="js/background.js"></script> -->
+    <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+
+    <script src="https://kit.fontawesome.com/7489903411.js" crossorigin="anonymous"></script>
   </body>
 </html>
