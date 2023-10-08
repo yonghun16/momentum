@@ -19,12 +19,18 @@
           <img src="img/icons/google.svg" class="searchForm__engin" />
         </form>
       </div>
-      <div>
-        <span>2</span>
+
+      <!-- 날씨 -->
+      <div class="weather">
+        <div></div>
+        <div></div>
       </div>
     </header>
 
     <main>
+      <!-- 시계 -->
+      <div class="clock">00:00</div>
+
       <!-- 로그인 폼 -->
       <form id="login-form" class="hidden" >
         <input
@@ -36,8 +42,6 @@
         <input type="submit" value="Log In" />
       </form>
 
-      <!-- 시계 -->
-      <h2 id="clock">00:00:00</h2>
 
       <!-- 인사말 -->
       <h1 id="greeting" class="hidden"></h1>
@@ -60,18 +64,13 @@
         <span></span>
       </div>
 
-      <!-- 날씨 -->
-      <div id="weather">
-        <span></span>
-        <span></span>
-      </div>
     </footer>
 
     <script src="js/search.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
+    <!-- <script src="js/background.js"></script> -->
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
 

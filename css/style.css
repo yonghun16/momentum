@@ -1,5 +1,7 @@
 @import "reset.css";
 @import "search.css";
+@import "weather.css";
+@import "clock.css";
 
 body {
   font-size: 16px;

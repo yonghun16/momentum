@@ -1,0 +1,12 @@
+.weather {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather div:last-child {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
