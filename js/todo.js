@@ -1,6 +1,6 @@
-const toDoForm = document.getElementById("todo-form");
-const toDoInput = document.querySelector("#todo-form input");
-const toDoList = document.getElementById("todo-list");
+const toDoForm = document.querySelector(".todoForm");
+const toDoInput = document.querySelector(".todoForm input");
+const toDoList = document.getElementById(".todoList");
 
 const TODOS_KEY = "todos";
 
@@ -31,6 +31,7 @@ function paintToDo(newTodoObj) {
 }
 
 function handleToDoSubmit(event) {
+  console.log("df");
   event.preventDefault();
   const newTodo = toDoInput.value;
   toDoInput.value = "";

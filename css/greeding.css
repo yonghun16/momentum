@@ -1,0 +1,33 @@
+.loginForm {
+  z-index: 1;
+}
+
+.loginForm input {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  text-align: center;
+  width: 215px;
+}
+.loginForm input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.loginForm input:active, 
+.loginForm input:focus {
+  outline: none;
+  border-bottom: 2px solid white;
+  transition: border-bottom 0.2s ease-in-out;
+}
+.loginForm [type="submit"]{
+  display: none;
+}
+
+.greeting {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 1;
+}

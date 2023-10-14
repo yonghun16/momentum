@@ -27,12 +27,37 @@
       </div>
     </header>
 
+    <footer>
+      <!-- 그림 소스 -->
+      <div class="backgroundSource">
+      </div>
+
+      <!-- 명언 -->
+      <div class="quote">
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- 할일 리스트 -->
+      <div class="todo">
+        <form class="todoForm">
+          <input
+            type="text"
+            required
+            placeholder="Write a To Do and Press Enter"
+          />
+        </form>
+        <ul class="todoList"></ul>
+      </div>
+    </footer>
+
     <main>
       <!-- 시계 -->
       <div class="clock">00:00</div>
+      <div class="background2"></div>
 
       <!-- 로그인 폼 -->
-      <form id="login-form" class="hidden" >
+      <form class ="loginForm hidden" >
         <input
           required
           maxlength="15"
@@ -41,36 +66,16 @@
         />
         <input type="submit" value="Log In" />
       </form>
-
-
       <!-- 인사말 -->
-      <h1 id="greeting" class="hidden"></h1>
+      <h1 class="greeting hidden"></h1>
     </main>
 
-    <footer>
-      <!-- 할릴 리스트 -->
-      <form id="todo-form">
-        <input
-          type="text"
-          required
-          placeholder="Write a To Do and Press Enter"
-        />
-      </form>
-      <ul id="todo-list"></ul>
-
-      <!-- 명언 -->
-      <div id="quote">
-        <span></span>
-        <span></span>
-      </div>
-
-    </footer>
 
     <script src="js/search.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
-    <!-- <script src="js/background.js"></script> -->
+    <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
 

@@ -2,9 +2,13 @@
 @import "search.css";
 @import "weather.css";
 @import "clock.css";
+@import "greeding.css";
+@import "quote.css";
+@import "todo.css";
 
 body {
   font-size: 16px;
+  position: relative;
 }
 
 .hidden {

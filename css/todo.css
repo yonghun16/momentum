@@ -1,0 +1,18 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding-bottom: 15px;
+  line-height: 1.5;
+  z-index: 1;
+}
+.backgroundSource {
+  width: 15%;
+  min-width:100px;
+}
+.todo {
+  width: 15%;
+  display: flex;
+  justify-content: flex-end;
+}

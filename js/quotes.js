@@ -47,11 +47,15 @@ const quotes = [
     quote : "청중이 다 듣기 전에 반드시 할 말을 끝내라.",
     author : "도로시 사노프",
   },
+  {
+    quote : "내일이란 오늘의 다른 이름일 뿐이다.",
+    author : "윌리엄 포크너",
+  },
 ]
 
-const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
+const quote = document.querySelector(".quote span:first-child");
+const author = document.querySelector(".quote span:last-child");
 const todaysQuote = quotes[parseInt(Math.random()*quotes.length)];
 
-quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+quote.innerText = `"${todaysQuote.quote}"`;
+author.innerText = `- ${todaysQuote.author}`;

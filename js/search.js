@@ -3,6 +3,7 @@ const searchFormGlass = document.querySelector(".searchForm__glass");
 const searchInput = document.querySelector(".searchForm input");
 const searchEngin = document.querySelector(".searchForm__engin");
 
+
 // searchForm에 마우스가 들어 왔을 때 이벤트
 function hoverSearch() {
   if(!searchForm.classList.contains("searchForm-hover") ||
@@ -41,6 +42,5 @@ function focusChangeSearch() {
 //이벤트 핸들링
 searchForm.addEventListener("mouseover", hoverSearch);
 searchForm.addEventListener("mouseout", leaveSearch);
-
 searchInput.addEventListener("focus", focusSearch);
 searchInput.addEventListener("blur", focusChangeSearch);
