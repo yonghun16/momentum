@@ -1,6 +1,7 @@
 const toDoForm = document.querySelector(".todoForm");
 const toDoInput = document.querySelector(".todoForm input");
-const toDoList = document.getElementById(".todoList");
+const toDoList = document.querySelector(".todoList");
+const toDoBox = document.querySelector(".todoBox");
 
 const TODOS_KEY = "todos";
 
@@ -10,11 +11,33 @@ function saveTodos() {
   localStorage.setItem("TODOS_KEY", JSON.stringify(toDos));
 }
 
+function todoBoxResize() {
+  const winHeight = window.innerHeight;
+  const todoHeight = winHeight * 0.8;
+
+  let saves = localStorage.getItem("TODOS_KEY");
+  const parseSaves = JSON.parse(saves).length;
+
+
+  const boxHeight = parseSaves * 28 + 100;
+  if (boxHeight < 120) {
+    toDoBox.style.height = `100px`;
+  }
+  else if (boxHeight > winHeight*0.8) {
+    toDoBox.style.height = `${todoHeight}px`;
+  }
+  else {
+    toDoBox.style.height = `${boxHeight}px`;
+  }
+}
+
 function deleteTodo(event) {
   const li = event.target.parentElement;
   li.remove();
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   saveTodos();
+
+  todoBoxResize();
 }
 
 function paintToDo(newTodoObj) {
@@ -31,7 +54,6 @@ function paintToDo(newTodoObj) {
 }
 
 function handleToDoSubmit(event) {
-  console.log("df");
   event.preventDefault();
   const newTodo = toDoInput.value;
   toDoInput.value = "";
@@ -42,9 +64,8 @@ function handleToDoSubmit(event) {
   toDos.push(newTodoObj);
   paintToDo(newTodoObj);
   saveTodos();
+  todoBoxResize();
 }
-
-toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedToDos = localStorage.getItem("TODOS_KEY");
 
@@ -52,5 +73,11 @@ if (savedToDos) {
   const parseedToDos = JSON.parse(savedToDos);
   toDos = parseedToDos;
   parseedToDos.forEach(paintToDo);
+
+  todoBoxResize();
 }
+
+
+toDoForm.addEventListener("submit", handleToDoSubmit);
+
 

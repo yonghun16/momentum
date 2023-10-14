@@ -14,11 +14,3 @@ main {
   color: white;
   z-index: 1;
 }
-
-.background2 {
-  position: absolute;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  height: 100vh;
-  z-index: 0;
-}
