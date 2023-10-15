@@ -100,6 +100,11 @@ footer {
   color: #222;
   padding: 2px;
 }
+
+.todoList li span:last-child {
+  padding-left: 3px;
+}
+
 .todoList li button {
   padding: 0;
   width: 20px;

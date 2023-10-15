@@ -21,13 +21,42 @@
   border-bottom: 2px solid white;
   transition: border-bottom 0.2s ease-in-out;
 }
+
 .loginForm [type="submit"]{
   display: none;
+}
+
+.greeting_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.greeting_wrap div{
+  min-width: 80px;
 }
 
 .greeting {
   color: white;
   font-size: 3rem;
   font-weight: bold;
-  z-index: 1;
+}
+
+.logout {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.logout:hover {
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.opacity0 {
+  opacity : 0;
 }
