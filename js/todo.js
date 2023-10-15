@@ -53,12 +53,17 @@ function deleteTodo(event) {
 function paintToDo(newTodoObj) {
   const li = document.createElement("li");
   li.id = newTodoObj.id;
+  const div = document.createElement("div");
+  const checkbox = document.createElement("span");
+  checkbox.innerHTML = `<input type="checkbox" id="${li.id}c">`;
   const span = document.createElement("span");
   span.innerText = newTodoObj.text;
   const button = document.createElement("button");
-  button.innerText= "❌";
+  button.innerText= "🗑";
   button.addEventListener("click", deleteTodo);
-  li.appendChild(span);
+  li.appendChild(div);
+  div.appendChild(checkbox);
+  div.appendChild(span);
   li.appendChild(button);
   toDoList.appendChild(li);
 }

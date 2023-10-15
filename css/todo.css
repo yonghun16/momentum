@@ -26,6 +26,11 @@ footer {
   padding-right: 5px;
   color: rgba(255, 255, 255, 0.8);
 }
+.todo__btn:hover {
+  cursor:pointer;
+  color:white;
+  transition: color 0.2s ease-in-out;
+}
 
 @keyframes fade_in {
   from {
@@ -89,10 +94,22 @@ footer {
 
 .todoList li {
   font-size: 0.9rem;
+  font-weight: 400;
   display: flex;
   justify-content: space-between;
   color: #222;
   padding: 2px;
+}
+.todoList li button {
+  padding: 0;
+  width: 20px;
+  background: none;
+  border: none;
+}
+.todoList li button:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .todoForm input {
