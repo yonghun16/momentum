@@ -14,7 +14,6 @@ footer {
 
 .todo {
   width: 15%;
-  color: rgba(255, 255, 255, 0.8);
   font-weight: bold;
   font-size: 1.1rem;
   display: flex;
@@ -25,28 +24,7 @@ footer {
 
 .todo__btn {
   padding-right: 5px;
-}
-
-.todoForm input {
-  bottom: 0;
-  font-size: 1.0rem;
-  background: none;
-  border: none;
-  color: #555;
-  outline: none;
-  border-bottom: 2px solid rgba(0, 0, 0, 0);
-  width: 250px;
-}
-.todoForm input::placeholder {
-  color: rgba(0, 0, 0, 0.5);
-}
-.todoForm input:active, 
-.todoForm input:focus {
-  outline: none;
-  transition: border-bottom 0.2s ease-in-out;
-}
-.todoForm [type="submit"]{
-  display: none;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .todoBox {
@@ -59,19 +37,24 @@ footer {
   box-sizing: border-box;
 }
 
-.todoBox__wraper {
-  width: 300px;
-  height: 100px;
-  overflow-y: scroll;
-  transition: height 0.2s ease-in-out;
-}
-
-
 .todoBox__subject {
   color: rgb(25, 25, 25);
   font-weight: 500;
   font-size: 1.3rem;
   margin-bottom: 10px;
+}
+
+.todoBox__startMessage {
+  display: flex;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+}
+
+.todoBox__wraper {
+  width: 300px;
+  overflow-y: scroll;
+  transition: height 0.2s ease-in-out;
 }
 
 .todoBox__list {
@@ -87,3 +70,26 @@ footer {
   color: #222;
   padding: 2px;
 }
+
+.todoForm input {
+  bottom: 0;
+  font-size: 1.0rem;
+  background: none;
+  border: none;
+  color: #555;
+  outline: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  width: 250px;
+}
+.todoForm input::placeholder {
+  color: rgba(0, 0, 0, 0.35);
+}
+.todoForm input:active, 
+.todoForm input:focus {
+  outline: none;
+  transition: border-bottom 0.2s ease-in-out;
+}
+.todoForm [type="submit"]{
+  display: none;
+}
+

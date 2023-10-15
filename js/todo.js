@@ -2,6 +2,7 @@ const toDoForm = document.querySelector(".todoForm");
 const toDoInput = document.querySelector(".todoForm input");
 const toDoList = document.querySelector(".todoList");
 const toDoBox = document.querySelector(".todoBox__wraper");
+const toDoBoxStartMessage = document.querySelector(".todoBox__startMessage");
 
 const TODOS_KEY = "todos";
 
@@ -18,9 +19,18 @@ function todoBoxResize() {
   let saves = localStorage.getItem("TODOS_KEY");
   const parseSaves = JSON.parse(saves).length;
 
+  if (parseSaves > 0) {
+    toDoBoxStartMessage.classList.add("hidden");
+  }
+  else {
+    toDoBoxStartMessage.classList.remove("hidden");
+  }
 
-  const boxHeight = parseSaves * 28 + 40;
-  if (boxHeight < 70) {
+  console.log(parseSaves);
+
+
+  const boxHeight = parseSaves * 28 ;
+  if (boxHeight < 50) {
     toDoBox.style.height = `40px`;
   }
   else if (boxHeight > winHeight*0.8) {
