@@ -17,10 +17,11 @@ function saveTodos() {
 
 function todoBoxResize() {
   const winHeight = window.innerHeight;
-  const todoHeight = winHeight * 0.8;
+  const todoHeight = winHeight * 0.7;
 
   let saves = localStorage.getItem("TODOS_KEY");
   const parseSaves = JSON.parse(saves).length;
+  const boxHeight = parseSaves * 28 ;
 
   if (parseSaves > 0) {
     toDoBoxStartMessage.classList.add("hidden");
@@ -29,11 +30,10 @@ function todoBoxResize() {
     toDoBoxStartMessage.classList.remove("hidden");
   }
 
-  const boxHeight = parseSaves * 28 ;
   if (boxHeight < 50) {
     toDoBoxWraper.style.height = `40px`;
   }
-  else if (boxHeight > winHeight*0.8) {
+  else if (boxHeight > winHeight*0.7) {
     toDoBoxWraper.style.height = `${todoHeight}px`;
   }
   else {
@@ -64,7 +64,12 @@ function paintToDo(newTodoObj) {
 }
 
 function handleToDoBtn() {
-  toDoBox.classList.toggle("todoBoxHidden");
+  if (toDoBox.classList.contains("hidden")) {
+    toDoBox.classList.remove("hidden");
+  }
+  else {
+    toDoBox.classList.toggle("todoBoxHidden");
+  }
 }
 
 function handleToDoSubmit(event) {
@@ -81,6 +86,10 @@ function handleToDoSubmit(event) {
   todoBoxResize();
 }
 
+function handleWindowResize() {
+  todoBoxResize();
+}
+
 const savedToDos = localStorage.getItem("TODOS_KEY");
 
 if (savedToDos) {
@@ -94,4 +103,4 @@ if (savedToDos) {
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
 toDoBtn.addEventListener("click", handleToDoBtn);
-
+window.addEventListener("resize", handleWindowResize);
