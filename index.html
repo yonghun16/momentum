@@ -11,8 +11,14 @@
     <header>
       <!-- 검색 폼-->
       <div class="linkAndSearch">
-        <div class="linksButton"> Links </div>
-        <form class="searchForm" action="https://www.google.com/search" type="text" autocomplete="off" method="get">
+        <div class="linksButton">Links</div>
+        <form
+          class="searchForm"
+          action="https://www.google.com/search"
+          type="text"
+          autocomplete="off"
+          method="get"
+        >
           <i class="fa-solid fa-magnifying-glass searchForm__glass"></i>
           <input required type="text" name="q" />
           <input type="submit" value="search" />
@@ -27,14 +33,13 @@
       </div>
     </header>
 
-
     <main>
       <!-- 시계 -->
       <div class="clock">00:00</div>
       <div class="background2"></div>
 
       <!-- 로그인 폼 -->
-      <form class ="loginForm hidden" >
+      <form class="loginForm hidden">
         <input
           required
           maxlength="15"
@@ -48,11 +53,9 @@
       <h1 class="greeting hidden"></h1>
     </main>
 
-
     <footer>
       <!-- 그림 소스 -->
-      <div class="backgroundSource">
-      </div>
+      <div class="backgroundSource"></div>
 
       <!-- 명언 -->
       <div class="quote">
@@ -65,20 +68,19 @@
         <span class="todo__btn"> Todo </span>
         <div class="todoBox">
           <div class="todoBox__subject">Today</div>
-          <div class="todoBox__list"> 
-            <ul class="todoList"></ul>
+          <div class="todoBox__wraper">
+            <div class="todoBox__list">
+              <ul class="todoList"></ul>
+            </div>
+          </div>
             <form class="todoForm">
-              <input
-                type="text"
-                required
-                placeholder="New Todo"
-              />
+              <input type="text" required placeholder="New Todo" />
             </form>
+          <div>
           </div>
         </div>
       </div>
     </footer>
-
 
     <!-- 자바 스크립트 소스-->
     <script src="js/search.js"></script>
@@ -89,6 +91,9 @@
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
 
-    <script src="https://kit.fontawesome.com/7489903411.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/7489903411.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

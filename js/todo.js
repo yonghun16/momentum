@@ -1,7 +1,7 @@
 const toDoForm = document.querySelector(".todoForm");
 const toDoInput = document.querySelector(".todoForm input");
 const toDoList = document.querySelector(".todoList");
-const toDoBox = document.querySelector(".todoBox");
+const toDoBox = document.querySelector(".todoBox__wraper");
 
 const TODOS_KEY = "todos";
 
@@ -19,9 +19,9 @@ function todoBoxResize() {
   const parseSaves = JSON.parse(saves).length;
 
 
-  const boxHeight = parseSaves * 28 + 100;
-  if (boxHeight < 120) {
-    toDoBox.style.height = `100px`;
+  const boxHeight = parseSaves * 28 + 40;
+  if (boxHeight < 70) {
+    toDoBox.style.height = `40px`;
   }
   else if (boxHeight > winHeight*0.8) {
     toDoBox.style.height = `${todoHeight}px`;
