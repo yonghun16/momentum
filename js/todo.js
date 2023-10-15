@@ -1,8 +1,11 @@
 const toDoForm = document.querySelector(".todoForm");
 const toDoInput = document.querySelector(".todoForm input");
 const toDoList = document.querySelector(".todoList");
-const toDoBox = document.querySelector(".todoBox__wraper");
+const toDoBox = document.querySelector(".todoBox");
+const toDoBoxWraper = document.querySelector(".todoBox__wraper");
 const toDoBoxStartMessage = document.querySelector(".todoBox__startMessage");
+const toDoBtn = document.querySelector(".todo__btn");
+
 
 const TODOS_KEY = "todos";
 
@@ -26,18 +29,15 @@ function todoBoxResize() {
     toDoBoxStartMessage.classList.remove("hidden");
   }
 
-  console.log(parseSaves);
-
-
   const boxHeight = parseSaves * 28 ;
   if (boxHeight < 50) {
-    toDoBox.style.height = `40px`;
+    toDoBoxWraper.style.height = `40px`;
   }
   else if (boxHeight > winHeight*0.8) {
-    toDoBox.style.height = `${todoHeight}px`;
+    toDoBoxWraper.style.height = `${todoHeight}px`;
   }
   else {
-    toDoBox.style.height = `${boxHeight}px`;
+    toDoBoxWraper.style.height = `${boxHeight}px`;
   }
 }
 
@@ -61,6 +61,10 @@ function paintToDo(newTodoObj) {
   li.appendChild(span);
   li.appendChild(button);
   toDoList.appendChild(li);
+}
+
+function handleToDoBtn() {
+  toDoBox.classList.toggle("todoBoxHidden");
 }
 
 function handleToDoSubmit(event) {
@@ -89,5 +93,5 @@ if (savedToDos) {
 
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
-
+toDoBtn.addEventListener("click", handleToDoBtn);
 
