@@ -43,6 +43,13 @@
   font-weight: bold;
 }
 
+.logout_wrap {
+  margin-top:13px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
 .logout {
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
