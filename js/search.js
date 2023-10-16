@@ -39,7 +39,8 @@ function focusChangeSearch() {
   searchEngin.classList.toggle("searchForm__engin-focus");
 }
 
-//이벤트 핸들링
+
+// main
 searchForm.addEventListener("mouseover", hoverSearch);
 searchForm.addEventListener("mouseout", leaveSearch);
 searchInput.addEventListener("focus", focusSearch);

@@ -63,7 +63,7 @@ footer {
 
 .todoBoxHidden {
   animation: fade_out 0.5s forwards;
-  pointer-events: none;
+  pointer-events: none;  /* 포인터를 사용 못하게 만듬 */
 }
 
 .todoBox__subject {

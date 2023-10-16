@@ -8,10 +8,13 @@
   </head>
 
   <body>
+    <!-- 링크, 검색, 날씨-->
     <header>
-      <!-- 검색 폼-->
+      <!-- 링크, 검색 폼-->
       <div class="linkAndSearch">
+        <!-- 링크 - 구현 안함-->
         <div class="linksButton">Links</div>
+        <!-- 검색폼 - 구글만 설정 타 검색엔진 구현 안함-->
         <form
           class="searchForm"
           action="https://www.google.com/search"
@@ -20,7 +23,7 @@
           method="get"
         >
           <i class="fa-solid fa-magnifying-glass searchForm__glass"></i>
-          <input required type="text" name="q" />
+          <input required type="text" name="q" />  <!-- name값 p를 주어야 구글에서 검색 됨-->
           <input type="submit" value="search" />
           <img src="img/icons/google.svg" class="searchForm__engin" />
         </form>
@@ -28,15 +31,18 @@
 
       <!-- 날씨 -->
       <div class="weather">
-        <div></div>
-        <div></div>
+        <div></div>   <!-- 날씨, 기온-->
+        <div></div>   <!-- 지역 -->
       </div>
     </header>
 
+    <!-- 시계, 배경그림, 로그인, 인사말 -->
     <main>
       <!-- 시계 -->
       <div class="clock">00:00</div>
-      <div class="background2"></div>
+
+      <!-- 배경 그림 소스- js에서 main태그에 삽입 -->
+      <div class="background2"></div>      <!-- 검은색 불투명 - 글자를 돋보이게 하기 위함 -->
 
       <!-- 로그인 폼 -->
       <form class="loginForm hidden">
@@ -50,17 +56,20 @@
       </form>
 
       <!-- 인사말 -->
+      <!-- logout버튼이 있어도 greeting가 가운데 있도록 하기 위해 왼, 중, 우 3단 구성 greeting 왼쪽에 빈 div -->
       <div class="greeting_wrap hidden">
-        <div></div>
+        <div></div>   <!-- min 80px -->
+        <!-- 인사말 -->
         <h1 class="greeting"></h1>
-        <div class="logout_wrap opacity0">
+        <!-- 로그아웃 버튼 -->
+        <div class="logout_wrap opacity0"> <!-- min 80px -->
           <i class="fa-solid fa-right-from-bracket logout"></i>
         </div>
       </div>
     </main>
 
-    <footer>
-      <!-- 그림 소스 -->
+    <footer> 
+      <!-- 백그라운드 이미지에 대한 설명 : 구현 안함-->
       <div class="backgroundSource"></div>
 
       <!-- 명언 -->
@@ -71,21 +80,24 @@
 
       <!-- 할일 리스트 -->
       <div class="todo">
+        <!-- Todo 버튼 -->
         <span class="todo__btn"> Todo </span>
+        <!-- 할 일 박스 - 새로고침 해도 안보이도록 hidden값 deault -->
         <div class="todoBox hidden">
+          <!-- 할 일 제목 -->
           <div class="todoBox__subject">Today</div>
+          <!-- 할 일 목록 -->
           <div class="todoBox__wraper">
             <span class="todoBox__startMessage">Add a todo to get started</span>
             <div class="todoBox__list">
-              <ul class="todoList">
-              </ul>
+              <ul class="todoList"></ul>
             </div>
           </div>
-            <form class="todoForm">
-              <input type="text" required placeholder="New Todo" />
-            </form>
-          <div>
-          </div>
+          <!-- 할 일 입력 버튼 -->
+          <form class="todoForm">
+            <input type="text" required placeholder="New Todo" />
+          </form>
+
         </div>
       </div>
     </footer>
@@ -93,7 +105,7 @@
     <!-- 자바 스크립트 소스-->
     <script src="js/search.js"></script>
     <script src="js/greetings.js"></script>
-    <script src="js/clock.js"></script>
+    <script src="js/clock.js"></script>     
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>

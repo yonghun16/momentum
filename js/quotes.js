@@ -1,3 +1,8 @@
+// 요소 선택
+const quote = document.querySelector(".quote span:first-child");
+const author = document.querySelector(".quote span:last-child");
+
+// 명언 배열
 const quotes = [
   {
     quote : "경청하고 대답을 잘 해주는 것은 대화술에서 인간이 다다를 수 있는 최고의 경지이다.",
@@ -53,8 +58,8 @@ const quotes = [
   },
 ]
 
-const quote = document.querySelector(".quote span:first-child");
-const author = document.querySelector(".quote span:last-child");
+
+// main
 const todaysQuote = quotes[parseInt(Math.random()*quotes.length)];
 
 quote.innerText = `"${todaysQuote.quote}"`;

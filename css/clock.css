@@ -1,16 +1,8 @@
-main {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-}
-
 .clock {
   font-size: 11em;
   font-weight: bold;
   color: white;
   z-index: 1;
 }
+
+/* z-index를 1로 하여 검은색 불투명한 배경(z-index:0) 위에 올라와 시계가 뚜렷히 보이도록 함. */
