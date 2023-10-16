@@ -1,7 +1,7 @@
+/* 로그인 폼 */
 .loginForm {
   z-index: 1;
 }
-
 .loginForm input {
   font-size: 1.5rem;
   background: none;
@@ -21,35 +21,36 @@
   border-bottom: 2px solid white;
   transition: border-bottom 0.2s ease-in-out;
 }
-
 .loginForm [type="submit"]{
   display: none;
 }
 
+
+/* 인사말 */
 .greeting_wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
 }
-
+/* greeding 좌우 div에 80px */
 .greeting_wrap div{
   min-width: 80px;
 }
-
 .greeting {
   color: white;
   font-size: 3rem;
   font-weight: bold;
 }
 
+
+/* 로그 아웃 */
 .logout_wrap {
-  margin-top:13px;
+  margin-top:10px;
   display: flex;
   align-items: center;
   height: 30px;
 }
-
 .logout {
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
@@ -57,13 +58,10 @@
   font-weight: bold;
   margin-left: 20px;
 }
-
 .logout:hover {
   color: white;
-  border-radius: 50%;
   cursor: pointer;
 }
-
 .opacity0 {
   opacity : 0;
 }
